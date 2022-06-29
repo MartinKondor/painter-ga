@@ -55,17 +55,20 @@ The ```EPOCH``` parameter varies row by row.
 | 32 | ![32b](images/readme/ep32-best.jpg)  | ![32w](images/readme/ep32-worst.jpg) | 00:07 |
 | 64 | ![64b](images/readme/ep64-best.jpg)  | ![64w](images/readme/ep64-worst.jpg) | 00:15 |
 | 128 |  ![128b](images/readme/ep128-best.jpg) | ![128w](images/readme/ep128-worst.jpg) | 00:31 |
-| 256 |  ![256b](images/readme/ep256-best.jpg) | ![128w](images/readme/ep256-worst.jpg) | 01:03 |
+| 256 |  ![256b](images/readme/ep256-best.jpg) | ![256w](images/readme/ep256-worst.jpg) | 01:03 |
+| 512 |  ![512b](images/readme/ep512-best.jpg) | ![512w](images/readme/ep512-worst.jpg) | 02:07 |
 | 1024 | ![1024b](images/readme/ep1024-best.jpg)  | ![1024w](images/readme/ep1024-worst.jpg) | 04:16 |
 
 Their improval with each step:
 
 <p align="center">
-    <img src="images/readme/ep16.jpg" />
-    <img src="images/readme/ep32.jpg" />
-    <img src="images/readme/ep64.jpg" />
-    <img src="images/readme/ep128.jpg" />
-    <img src="images/readme/ep1024.jpg" />
+    <img src="images/readme/ep16.png" alt="ep16" width="400px">
+    <img src="images/readme/ep32.png" alt="ep32" width="400px">
+    <img src="images/readme/ep64.png" alt="ep64" width="400px">
+    <img src="images/readme/ep128.png" alt="ep128" width="400px">
+    <img src="images/readme/ep256.png" alt="ep256" width="400px">
+    <img src="images/readme/ep512.png" alt="ep512" width="400px">
+    <img src="images/readme/ep1024.png" alt="ep1024" width="400px">
 </p>
 
 ## Authors

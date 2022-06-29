@@ -8,7 +8,7 @@ from tqdm import tqdm
 from person import Person
 
 
-EPOCH = 16  # Number of trainings
+EPOCH = 512  # Number of trainings
 ID_START = 0
 POP_SIZE = 128  # Number of starting images
 PERSON_SIZE = (32, 32,)  # Size of images
