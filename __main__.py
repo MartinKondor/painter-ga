@@ -8,7 +8,7 @@ from tqdm import tqdm
 from person import Person
 
 
-EPOCH = 100  # Number of trainings
+EPOCH = 500  # Number of trainings
 ID_START = 0
 POP_SIZE = 100  # Number of starting images
 PERSON_SIZE = (10, 10,)  # Size of images
@@ -190,12 +190,11 @@ class Population:
 
 
 if __name__ == '__main__':
-    # TODO: Numbers are not between 0-1, instead 0-255
     from matplotlib import pyplot as plt
 
     # The brighter the avg the more score
     def evaluation_function(person):
-        return 100*person.get_avg()
+        return person.get_avg()
 
     pop = Population(ID_START, POP_SIZE, PERSON_SIZE, evaluation_function)
     for i in tqdm(range(EPOCH)):
