@@ -8,10 +8,10 @@ from tqdm import tqdm
 from person import Person
 
 
-EPOCH = 512  # Number of trainings
+EPOCH = 100  # Number of trainings
 ID_START = 0
-POP_SIZE = 128  # Number of starting images
-PERSON_SIZE = (32, 32,)  # Size of images
+POP_SIZE = 100  # Number of starting images
+PERSON_SIZE = (10, 10,)  # Size of images
 
 
 class Population:
@@ -118,14 +118,6 @@ class Population:
                 if [x, y] not in choosen_for_a:
                     choosen_for_b.append([x, y])
 
-        """
-        for i in range(int(xs*ys/2 - 2)):
-            xi, yi = int(random.random()*xs - 1), int(random.random()*ys - 1)
-            while [xi, yi] in choosen_for_a or [xi, yi] in choosen_for_b:
-                xi, yi = int(random.random()*xs - 1), int(random.random()*ys - 1)
-            choosen_for_b.append([xi, yi])
-        """
-
         for index_a, index_b in zip(choosen_for_a, choosen_for_b):
             child.data[index_a[0]][index_a[1]] = person_a.data[index_a[0]][index_a[1]]
             child.data[index_b[0]][index_b[1]] = person_b.data[index_b[0]][index_b[1]]
@@ -206,17 +198,6 @@ if __name__ == '__main__':
         return 100*person.get_avg()
 
     pop = Population(ID_START, POP_SIZE, PERSON_SIZE, evaluation_function)
-
-    # Crossing test
-    """
-    a, b = Person(0, PERSON_SIZE), Person(1, PERSON_SIZE)
-    a.data = [[0 for i in range(100)] for i in range(100)]
-    b.data = [[255 for i in range(100)] for i in range(100)]
-    #Image.fromarray(np.array(b.data)).show()
-    Image.fromarray(np.array(pop._crossing(a, b).data)).convert('RGB').show()
-    exit(0)
-    """
-
     for i in tqdm(range(EPOCH)):
         pop.evolve()
 
@@ -225,28 +206,18 @@ if __name__ == '__main__':
     plt.title('Improvement with Epoch {}'.format(EPOCH))
     plt.plot(x, [p.get_avg() for p in pop.history['best_person']], c="g")
     plt.plot(x, [p.get_avg() for p in pop.history['worst_person']], c="r")
-    #plt.plot(x, pop.history['population_size'], c='r')
+    # plt.plot(x, pop.history['population_size'], c='r')
     plt.legend(['best_person', 'worst_person', 'pop_size'])
     plt.xlabel('time')
     plt.ylabel('score')
     plt.show()
 
-    img = Image.fromarray(np.array(pop.history['best_person'][0].data))
-    img.convert("L").save('paintings/first_best.jpg', 'JPEG')
-
     img = Image.fromarray(np.array(pop.history['best_person'][-1].data))
-    #img.convert("L").save('paintings/best.jpg', 'JPEG')
-    img.convert("L").save('images/readme/ep{}-best.jpg'.format(EPOCH), 'JPEG')
+    img.convert("L").save('paintings/best.jpg', 'JPEG')
+    #img.convert("L").save('images/readme/ep{}-best.jpg'.format(EPOCH), 'JPEG')
     #img.show("best")
 
     img = Image.fromarray(np.array(pop.history['worst_person'][0].data))
-    #img.convert("L").save('paintings/worst.jpg', 'JPEG')
-    img.convert("L").save('images/readme/ep{}-worst.jpg'.format(EPOCH), 'JPEG')
+    img.convert("L").save('paintings/worst.jpg', 'JPEG')
+    #img.convert("L").save('images/readme/ep{}-worst.jpg'.format(EPOCH), 'JPEG')
     #img.show("worst")
-
-    """
-    pop.creation()
-    pop.remove_person(0)
-    print(str(pop.population[0]))
-    print(len(pop.population))
-    """

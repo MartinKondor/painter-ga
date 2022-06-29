@@ -1,3 +1,19 @@
+![16bb](images/readme/ep16-best.jpg)
+![32bb](images/readme/ep32-best.jpg)
+![64bb](images/readme/ep64-best.jpg)
+![128bb](images/readme/ep128-best.jpg)
+![256bb](images/readme/ep256-best.jpg)
+![512bb](images/readme/ep512-best.jpg)
+![1024bb](images/readme/ep1024-best.jpg)
+
+![16bb](images/readme/ep16-worst.jpg)
+![32bb](images/readme/ep32-worst.jpg)
+![64bb](images/readme/ep64-worst.jpg)
+![128bb](images/readme/ep128-worst.jpg)
+![256bb](images/readme/ep256-worst.jpg)
+![512bb](images/readme/ep512-worst.jpg)
+![1024bb](images/readme/ep1024-worst.jpg)
+
 # 🎨 painter-ga
 
 [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/painter-ga/)
