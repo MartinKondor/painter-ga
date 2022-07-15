@@ -23,7 +23,7 @@
 [![version](https://img.shields.io/badge/version-v1.1-brightgreen.svg)](https://github.com/MartinKondor/painter-ga)
 [![GitHub Issues](https://img.shields.io/github/issues/MartinKondor/painter-ga.svg)](https://github.com/MartinKondor/painter-ga/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-BSD-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 Painter genetic algorithm.
 
